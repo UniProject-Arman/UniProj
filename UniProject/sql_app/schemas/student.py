@@ -45,5 +45,5 @@ class studentupdate(BaseModel):
     major:Optional[str]=None
     married: Optional[str] = None
     id: Optional[str] = None
-    scpirseids: Optional[str] = None
+    scourseids: Optional[str] = None
     lids: Optional[str] = None
