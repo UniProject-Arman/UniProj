@@ -36,7 +36,7 @@ class studentupdate(BaseModel):
     father: Optional[str] = None
     birth:Optional[str]=None
     ids: Optional[str] = None
-    birncity: Optional[str] = None
+    borncity: Optional[str] = None
     address: Optional[str] = None
     postalcode:Optional[str]=None
     cphone: Optional[str] = None
