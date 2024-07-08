@@ -76,7 +76,7 @@ def idcode(text: str):
 class valcourse:
     def cid_check(CID: str):
         if len(CID) != 5 or not is_digit(CID) or specialchar(CID):
-            raise HTTPException(status_code=400,detail=("Invalid course id"))
+            raise HTTPException(status_code=400,detail=("Invalid cid"))
 
     def cname_check(CName:str):
         if len(CName) > 25 or  len(CName) <2  or not persian(CName) or specialchar(CName) or is_digit(CName):

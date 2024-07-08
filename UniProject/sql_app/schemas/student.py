@@ -4,7 +4,6 @@ from sqlalchemy import Table, Column, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
-
 class student(BaseModel):
     stid: str
     fname: str
@@ -36,7 +35,7 @@ class studentupdate(BaseModel):
     father: Optional[str] = None
     birth:Optional[str]=None
     ids: Optional[str] = None
-    birncity: Optional[str] = None
+    borncity: Optional[str] = None
     address: Optional[str] = None
     postalcode:Optional[str]=None
     cphone: Optional[str] = None
@@ -45,5 +44,5 @@ class studentupdate(BaseModel):
     major:Optional[str]=None
     married: Optional[str] = None
     id: Optional[str] = None
-    scpirseids: Optional[str] = None
+    scourseids: Optional[str] = None
     lids: Optional[str] = None

@@ -37,10 +37,10 @@ def delete_Course(Course_id: int, db: Session = Depends(get_db)):
 
 @router.patch("/UpCourse/{Course_id}", response_model=schemas.CourseUpdate)
 def update_Course(Course_id: int, Course_update: schemas.CourseUpdate, db: Session = Depends(get_db)):
-    valcourse.cid_check(Course.CID)
-    valcourse.cname_check(Course.CName)
-    valcourse.dep_check(Course.Department)
-    valcourse.credit_check(Course.Credit)
+    valcourse.cid_check(Course_update.CID)
+    valcourse.cname_check(Course_update.CName)
+    valcourse.dep_check(Course_update.Department)
+    valcourse.credit_check(Course_update.Credit)
     Course = crud.get_Course(db, Course_id)
     if Course is None:
         raise HTTPException(status_code=404, detail="Course not found")
